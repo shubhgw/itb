@@ -144,6 +144,29 @@ footer {
   }
 }
 
+.notifications {
+  background-color: #e0ffc1;
+  padding: 10px 14px;
+  border: 2px solid #064734;
+  border-radius: 20px;
+  margin: 10px 0px;
+  gap: 10px;
+  flex-direction: column;
+
+  .notification{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    background-color: #b7fc73;
+    padding: 2px 10px;
+    border-radius: 10px;
+  }
+
+
+}
+
 .home {
   padding: 10px;
   margin-top: 10px;
@@ -279,7 +302,6 @@ footer {
   .leftheader {
     #batch {
       font-size: 20px;
-      
     }
     flex-wrap: wrap;
     justify-content: center;
@@ -315,7 +337,7 @@ footer {
     }
   }
 
-  .studydata{
+  .studydata {
     padding: 10px;
   }
 
@@ -325,22 +347,20 @@ footer {
     text-align: right;
   }
 
-  .folder{
-    img{
+  .folder {
+    img {
       width: 20px;
     }
   }
 
-  .dlink{
+  .dlink {
     font-size: 15px;
     margin: 5px;
-    img{
+    img {
       width: 20px;
     }
   }
-
 }
 
-@media only screen and (max-width: 425px){
-
-} 
+@media only screen and (max-width: 425px) {
+}
