@@ -16,6 +16,7 @@ html {
 body {
   background-color: #c8fc94;
   padding: 10px;
+  min-height: 900px;
 }
 
 .flexed {
@@ -107,7 +108,8 @@ header {
 .tcl {
   display: flex;
   flex-direction: row;
-  column-gap: 8px;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
 .tcl a {
@@ -146,26 +148,31 @@ footer {
 
 .notifications {
   background-color: #e0ffc1;
-  padding: 10px 14px;
-  border: 2px solid #064734;
-  border-radius: 20px;
+  padding: 15px 20px;
+  border: 1px solid #064734;
+  border-radius: 10px;
   margin: 10px 0px;
   gap: 10px;
   flex-direction: column;
   align-items: flex-start;
 
-  .notification{
+  summary {
+    font-family: "Bricolage Grotesque";
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  .notification {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
+    margin: 10px;
     gap: 5px;
     background-color: #b7fc73;
     padding: 2px 10px;
     border-radius: 10px;
   }
-
-
 }
 
 .home {
@@ -186,6 +193,22 @@ footer {
   }
 }
 
+details {
+  interpolate-size: allow-keywords;
+}
+
+details::details-content {
+  height: 0;
+  overflow: clip;
+  transition:
+    height 300ms ease,
+    content-visibility 300ms allow-discrete;
+}
+
+details[open]::details-content {
+  height: auto;
+}
+
 .studydata {
   display: flex;
   flex-direction: column;
@@ -200,26 +223,10 @@ footer {
   .sub {
     padding: 6px 0px;
 
-    details {
-      interpolate-size: allow-keywords;
-    }
-
-    details::details-content {
-      height: 0;
-      overflow: clip;
-      transition:
-        height 300ms ease,
-        content-visibility 300ms allow-discrete;
-    }
-
-    details[open]::details-content {
-      height: auto;
-    }
-
-    .summary {
+    /* summary {
       display: flex;
       align-items: center;
-    }
+    } */
     a {
       border: 0px;
     }
