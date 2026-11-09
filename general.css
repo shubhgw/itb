@@ -33,6 +33,7 @@ header {
   border: 2px solid #064734;
   border-radius: 30px;
   justify-content: space-between;
+  gap: 50px;
 }
 
 #batch {
@@ -50,7 +51,7 @@ header {
 }
 
 .rightheader {
-  column-gap: 12px;
+  gap: 12px;
 
   img {
     width: 30px;
@@ -110,7 +111,7 @@ header {
 .tcl {
   display: flex;
   flex-direction: row;
-  gap: 20px;
+  gap: 12px;
   flex-wrap: wrap;
 }
 
@@ -161,6 +162,7 @@ footer {
   align-items: flex-start;
   cursor: pointer;
 
+
   .notification {
     display: flex;
     flex-direction: row;
@@ -198,9 +200,15 @@ footer {
 summary {
   display: flex;
   align-items: center;
+  flex-direction: row;
+  justify-content: flex-start;
   column-gap: 5px;
   font-weight: bold;
   font-size: 18px;
+
+  span {
+    text-align: left;
+  }
 
   img {
     width: 30px;
@@ -286,79 +294,85 @@ details[open]::details-content {
   padding: 10px;
   margin: 10px;
 }
-
-@media only screen and (max-width: 1020px) {
-  header {
-    flex-wrap: wrap;
-    flex-direction: column;
-    padding: 20px;
-    row-gap: 15px;
-    align-items: center;
-    justify-content: center;
+@media only screen and (max-width: 320px) {
+  .tcl a {
+    width: 100% !important;
   }
-
-  .tcl {
-    flex-wrap: wrap;
+  .rightheader a,
+  button {
+    width: 99%;
     gap: 10px;
   }
 }
-
-@media only screen and (max-width: 570px) {
-  .rightheader {
-    flex-wrap: wrap;
-    gap: 10px;
+@media only screen and (max-width: 460px) {
+  .tcl {
     justify-content: center;
     align-items: center;
-  }
-  .tcl {
-    align-items: center;
-    justify-content: end;
-  }
-  header {
     padding: 10px;
+  }
+  .tcl a {
+    width: 230px;
+    gap: 10px;
+  }
+  #batch {
+    /* font-size: 5vw; */
+    text-align: center;
+  }
+
+  summary .subname {
+    text-align: left;
   }
 }
 
 @media only screen and (max-width: 570px) {
   header {
     border-radius: 20px;
+    padding: 10px;
+  }
+
+  .dlink {
+    margin: 10px !important;
   }
 
   .leftheader {
-    #batch {
-      font-size: 20px;
-    }
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 5px;
+    gap: 10px;
+    #wcelogo {
+      width: 40px;
+    }
   }
   .rightheader {
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
     img {
-      width: 20px;
+      width: 25px;
     }
-    a {
-      padding: 1px 10px;
+    a,
+    #contact {
+      padding: 3px 10px;
     }
     a span {
-      font-size: 15px;
-    }
-
-    #contact {
-      padding: 1px 10px;
+      font-size: 17px;
     }
 
     #contact span {
-      font-size: 15px;
+      font-size: 17px;
     }
   }
 
   .tcl {
+    align-items: center;
+    justify-content: end;
     a {
-      font-size: 16px;
+      font-size: 17px;
+      padding: 3px 10px;
     }
     a img {
-      width: 22px;
+      width: 25px;
     }
   }
 
@@ -366,8 +380,10 @@ details[open]::details-content {
     padding: 10px;
   }
 
+
+
   .subname {
-    font-size: 15px;
+    font-size: 17px;
     padding: 2px 5px;
     text-align: right;
   }
@@ -387,5 +403,17 @@ details[open]::details-content {
   }
 }
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 960px) {
+  header {
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 20px;
+    row-gap: 15px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .tcl {
+    gap: 10px;
+  }
 }
