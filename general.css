@@ -174,16 +174,16 @@ footer {
   gap: 10px;
   flex-direction: column;
   align-items: flex-start;
-}  
+}
 
 .update {
   display: flex;
-  flex-direction: row; 
+  flex-direction: row;
   align-items: center;
   gap: 10px;
   border-radius: 10px;
   transition: all 0.5s;
-} 
+}
 
 .notifications {
   background-color: #e0ffc1;
@@ -230,6 +230,7 @@ footer {
     }
   }
 }
+
 summary {
   display: flex;
   align-items: center;
